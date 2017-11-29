@@ -24,7 +24,7 @@ for i in indices:
     if (index <= cutoff):
       toArchive.append(index)
 
-print("Dumping indices: " + toArchive)
+print(toArchive)
 
 for index in toArchive:
   index = name_prefix + "-" + index
@@ -33,4 +33,3 @@ for index in toArchive:
   ed_output = "--output=" + path
   subprocess.call(["elasticdump", ed_input, ed_output])
   subprocess.call(["gzip", path])
-  es.delete(index)
