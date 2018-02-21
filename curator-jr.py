@@ -2,6 +2,7 @@
 # Depends on elasticdump (npm install -g elasticdump)
 from datetime import datetime, timedelta
 from elasticsearch import Elasticsearch
+from pathlib import Path
 import subprocess
 
 # Tenant's info goes here
@@ -29,7 +30,10 @@ print(toArchive)
 for index in toArchive:
   index = name_prefix + "-" + index
   path = archive_directory + "/" + index + ".json"
-  ed_input = "--input=http://" + haproxy_ip + ":9200/" + index
-  ed_output = "--output=" + path
-  subprocess.call(["elasticdump", ed_input, ed_output])
-  subprocess.call(["gzip", path])
+  if (Path(path).is_file()) or (Path(path + ".gz").is_file()):
+      continue;
+  else:
+    ed_input = "--input=http://" + haproxy_ip + ":9200/" + index
+    ed_output = "--output=" + path
+    subprocess.call(["elasticdump", ed_input, ed_output])
+    subprocess.call(["gzip", path])
