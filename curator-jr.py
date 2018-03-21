@@ -37,3 +37,4 @@ for index in toArchive:
     ed_output = "--output=" + path
     subprocess.call(["elasticdump", ed_input, ed_output])
     subprocess.call(["gzip", path])
+    es.indices.delete(index=index, ignore=[400, 404])
