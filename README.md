@@ -1,4 +1,4 @@
-#curator-jr
+# curator-jr
 
 *...a dollar-store ElasticSearch archival tool*
 
