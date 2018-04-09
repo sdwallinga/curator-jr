@@ -1,4 +1,4 @@
-#curator-jr
+# curator-jr
 
 *...a dollar-store ElasticSearch archival tool*
 
@@ -13,7 +13,7 @@
 * python-elasticsearch: `pip3 install elasticsearch`
 * Elasticdump from NPM: `npm install -g elasticdump`
 
-NOTE: The latest release of elasticdump, `3.3.8`, has dropped support for node.js versions less than 8. There are two options: upgrade Node, or `npm install -g elasticdump@3.3.7'.
+NOTE: The latest release of elasticdump, `3.3.8`, has dropped support for node.js versions less than 8. There are two options: upgrade Node, or `npm install -g elasticdump@3.3.7`.
 
 ## Usage
 
