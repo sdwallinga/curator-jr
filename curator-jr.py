@@ -6,8 +6,8 @@ from pathlib import Path
 import subprocess
 
 # Tenant's info goes here
-name_prefix = '5thc'
-haproxy_ip = '172.27.101.27'
+name_prefix = ''
+haproxy_ip = ''
 sla_days = 90
 archive_directory = '/home/ubuntu/archive'
 
