@@ -3,8 +3,8 @@ from datetime import datetime, timedelta
 from elasticsearch import Elasticsearch
 
 # Tenant's info goes here
-name_prefix = 'ies'
-haproxy_ip = '63.141.41.169'
+name_prefix = ''
+haproxy_ip = ''
 sla_days = 30
 
 es = Elasticsearch([haproxy_ip], port=9200)
